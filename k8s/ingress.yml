@@ -7,13 +7,12 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: 
-    http:
+  - http:
       paths:
-      - path: /api/sandbox
-        pathType: Prefix
+      - pathType: Prefix
+        path: "/api/sandbox"
         backend:
           service:
             name: sandbox-service
-            port:
+            port: 
               number: 80
