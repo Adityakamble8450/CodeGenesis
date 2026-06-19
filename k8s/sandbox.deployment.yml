@@ -13,10 +13,11 @@ spec:
     metadata:
       labels:
         app: sandbox
+        role: api
     spec:
       serviceAccountName: resource-manager
       containers:
-      - image:  sandbox-api:v3
+      - image:  sandbox-api:latest 
         imagePullPolicy: IfNotPresent
         name:  main-sandbox-container
         resources:
@@ -40,5 +41,4 @@ spec:
           timeoutSeconds: 10      
         ports:
         - containerPort:  3000
-          name:  main-sandbox
-      
+          name:  main-sandbox     

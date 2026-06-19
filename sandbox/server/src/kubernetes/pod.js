@@ -6,6 +6,7 @@ export async function createPod(sandboxId) {
             name: `sandbox-pod-${sandboxId}`,
             labels: {
                 app: 'sandbox',
+                role: 'preview',
                 sandboxId
             }
         },
@@ -17,8 +18,8 @@ export async function createPod(sandboxId) {
                     name: 'sandbox-container',
                     ports: [{ containerPort: 5173, name: 'http' }],
                     resources: {
-                        limits: { cpu: '500m', memory: '1Gi' },
-                        requests: { cpu: '250m', memory: '500Mi' }
+                        limits: { cpu: '250m', memory: '512Mi' },
+                        requests: { cpu: '100m', memory: '128Mi' }
                     }
                 }
             ]

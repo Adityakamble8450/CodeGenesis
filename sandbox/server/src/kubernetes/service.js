@@ -6,12 +6,14 @@ export async function createService(sandboxId) {
             name: `sandbox-service-${sandboxId}`,
             labels: {
                 app: 'sandbox',
+                role: 'preview',
                 sandboxId
             }
         },
         spec: {
             selector: {
                 app: 'sandbox',
+                role: 'preview',
                 sandboxId
             },
             ports: [

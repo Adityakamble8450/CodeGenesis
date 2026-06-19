@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app:  sandbox
+    role: api
   type:  ClusterIP 
   ports:
   - name:  main-sandbox-port
